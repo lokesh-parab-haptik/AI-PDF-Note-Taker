@@ -57,7 +57,6 @@ function UploadPdfDialog() {
 
     // API Call to PDF process Data
     const apiRes = await axios.get("/api/pdf-loader?pdfUrl=" + fileUrl);
-    console.log(apiRes.data.result);
     await embeddDocument({
       splitText: apiRes.data.result,
       fileId: fileId,

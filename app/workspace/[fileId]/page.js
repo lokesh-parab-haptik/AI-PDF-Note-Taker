@@ -34,10 +34,6 @@ function Workspace() {
     fileId: fileId,
   });
 
-  useEffect(() => {
-    console.log(fileInfo);
-  }, [fileInfo]);
-
   return (
     <div>
       <WorkspaceHeader

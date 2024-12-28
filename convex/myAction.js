@@ -42,7 +42,6 @@ export const search = action({
       }),
       { ctx }
     );
-    console.log(vectorStore, "vectorStore");
 
     const resultOne = await vectorStore.similaritySearch(args.query, 1);
 

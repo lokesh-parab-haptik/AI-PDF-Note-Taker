@@ -12,7 +12,6 @@ function WorkspaceHeader({ fileName, fileId, editor }) {
   const { user } = useUser();
 
   const handleSave = () => {
-    console.log(editor.getHTML());
     saveNotes({
       fileId: fileId,
       notes: editor.getHTML(),
@@ -22,7 +21,7 @@ function WorkspaceHeader({ fileName, fileId, editor }) {
   };
 
   return (
-    <div className="p-4 flex justify-between shadow-md">
+    <div className="p-4 flex justify-between items-center shadow-md">
       <Image src={"/logo.svg"} alt="logo" width={80} height={50} />
       <h2 className="text-2xl font-bold">{fileName}</h2>
       <div className="flex gap-5">

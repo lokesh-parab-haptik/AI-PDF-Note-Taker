@@ -1,8 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { api } from "@/convex/_generated/api";
-import { UserButton, useUser } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 import { useMutation } from "convex/react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 
@@ -16,8 +17,6 @@ export default function Home() {
       imageUrl: user?.imageUrl,
       userName: user?.fullName,
     });
-
-    console.log(result);
   };
 
   useEffect(() => {
@@ -25,14 +24,15 @@ export default function Home() {
   }, [user]);
 
   return (
-    <div className="flex flex-col gap-5 items-center justify-center h-screen">
+    <div className="flex flex-col gap-5 items-center justify-center h-screen bg-gradient-to-b from-sky-400 to-blue-100 ">
+      <Image src={"/logo.svg"} alt="logo" width={170} height={55} />
       <h2 className="text-6xl font-bold text-center">
-        Simplify PDF Note-Taking
+        Simplify <sapn className="text-red-800">PDF</sapn> Note-Taking
       </h2>
       <h2 className="text-6xl font-bold text-blue-900 text-center">
         with AI-Powered
       </h2>
-      <Link href={"/dashboard"}>
+      <Link href={"/dashboard"} className="mt-2">
         <Button className="text-sm rounded-lg h-12 w-48">
           Go to Dashboard
         </Button>
