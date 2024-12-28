@@ -24,7 +24,7 @@ export default function Home() {
   }, [user]);
 
   return (
-    <div className="flex flex-col gap-5 items-center justify-center h-screen bg-gradient-to-b from-sky-400 to-blue-100 ">
+    <div className="flex flex-col gap-5 items-center justify-center h-screen bg-gradient-to-b from-sky-300 to-blue-100 ">
       <Image src={"/logo.svg"} alt="logo" width={170} height={55} />
       <h2 className="text-6xl font-bold text-center">
         Simplify <sapn className="text-red-800">PDF</sapn> Note-Taking
